@@ -8,9 +8,11 @@ import org.slf4j.LoggerFactory;
 @SpringBootApplication
 public class SpringCifradorApplication {
 
+
+
 	private static final Logger logger = LoggerFactory.getLogger(SpringCifradorApplication.class);
 	static {
-		logger.info("cifrador"); // Carga libcifrador.so
+		logger.info("cifrador..."); // Carga libcifrador.so
 		System.loadLibrary("cifrador");
 		logger.info("Biblioteca cargada exitosamente!");
 	}
