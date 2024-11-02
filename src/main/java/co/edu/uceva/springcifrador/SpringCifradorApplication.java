@@ -9,15 +9,15 @@ import org.slf4j.LoggerFactory;
 public class SpringCifradorApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(SpringCifradorApplication.class);
+
 	static {
-		logger.info("cifrador"); // Carga libcifrador.so
-		System.loadLibrary("cifrador");
+		logger.info("Cargando la biblioteca nativa cifrador...");
+		System.loadLibrary("cifrador"); // Asegúrate de que el nombre coincida con tu archivo .so sin "lib" y ".so"
 		logger.info("Biblioteca cargada exitosamente!");
 	}
+
 	public static void main(String[] args) {
-		logger.info("Iniciando aplicacion");
+		logger.info("Iniciando aplicación Spring Boot");
 		SpringApplication.run(SpringCifradorApplication.class, args);
-
 	}
-
 }
